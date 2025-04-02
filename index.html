@@ -6,32 +6,71 @@
     <title>Pwned Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #1c92d2, #f2fcfe);
+            color: #333;
             text-align: center;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
         h1 {
-            color: red;
-            font-size: 50px;
-            margin-top: 20px;
+            color: #ff4d4d;
+            font-size: 60px;
+            margin-top: 80px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
-        img {
-            width: 300px;
-            height: auto;
+        h2 {
+            color: #222;
+            font-size: 26px;
             margin-top: 30px;
-            display: block;
+        }
+        h3 {
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+            font-weight: normal;
+            max-width: 80%;
             margin-left: auto;
             margin-right: auto;
+        }
+        img {
+            width: 80%;
+            max-width: 350px;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            color: #777;
+            font-size: 14px;
+        }
+        footer a {
+            color: #1c92d2;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>You got pwned by Helen and Ashwini</h1>
-    <img id="randomImage" alt="Pwned Image">
+    <div class="content-wrapper">
+        <h1>You got pwned by Helen and Ashwini</h1>
+        <img id="randomImage" alt="Pwned Image">
+        <h2>Everyone is susceptible to social engineering.</h2>
+        <h3>Attackers exploit our natural trust and emotions to manipulate us into revealing sensitive information. It’s not about being naive—it’s about how we respond to social cues. Staying aware and cautious helps protect us all from falling victim to these tactics.</h3>
+    </div>
 
-    <h2>Everyone is susceptible to social engineering. Attackers exploit our natural trust and emotions to manipulate us into revealing sensitive information. It’s not about being naive—it’s about how we respond to social cues. Staying aware and cautious helps protect us all from falling victim to these tactics.</h2>
+    <footer>
+        <p>Stay safe! Learn more about <a href="https://www.security.com" target="_blank">social engineering</a>.</p>
+    </footer>
 
-    
     <script>
         const images = [
             "/Test1/meme1.png",
@@ -45,9 +84,5 @@
         const randomIndex = Math.floor(Math.random() * images.length);
         document.getElementById("randomImage").src = images[randomIndex];
     </script>
-
-
-
-
 </body>
 </html>
