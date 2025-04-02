@@ -19,13 +19,28 @@
             width: 300px;
             height: auto;
             margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
-
     <h1>You got pwned by Helen and Ashwini</h1>
-    <img src="f5ef5000641ee61a1866e04430db71fd.gif" alt="Pwned Image">
-
+    <img id="randomImage" alt="Pwned Image">
+    
+    <script>
+        const images = [
+            "image1.gif",
+            "image2.gif",
+            "image3.gif",
+            "image4.gif",
+            "image5.gif",
+            "image6.gif"
+        ];
+        
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById("randomImage").src = images[randomIndex];
+    </script>
 </body>
 </html>
